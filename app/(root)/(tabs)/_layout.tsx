@@ -22,7 +22,7 @@ const TabIcon = ({
     <Text
       className={`${
         focused
-          ? "text-primary-300 font-rubik_medium"
+          ? "text-primary-400 font-rubik_medium"
           : "text-black-200 font-rubik"
       } text-xs mt-1 w-full text-center`}
     >
@@ -52,6 +52,26 @@ const TabsLayout = () => {
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <TabIcon icon={icons.home} focused={focused} title="Home" />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="explore"
+        options={{
+          title: "Explore",
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <TabIcon icon={icons.search} focused={focused} title="Explore" />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <TabIcon icon={icons.person} focused={focused} title="Profile" />
           ),
         }}
       />
