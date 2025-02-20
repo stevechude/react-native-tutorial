@@ -150,7 +150,7 @@ export async function getProperties({
   }
 }
 
-export async function getPropertyById(id: string) {
+export async function getPropertyById({ id }: { id: string }) {
   try {
     const result = await databases.getDocument(
       config.databaseId!,
